@@ -2,7 +2,10 @@ package hello.servlet;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 
+// 자동으로 서블릿을 스캔해서 등록해줌
+@ServletComponentScan
 @SpringBootApplication
 public class ServletApplication {
 
