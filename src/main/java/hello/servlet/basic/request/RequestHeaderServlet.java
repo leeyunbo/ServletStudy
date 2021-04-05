@@ -14,11 +14,7 @@ public class RequestHeaderServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //START-LINE
-
-
         request.getHeaderNames().asIterator()
                 .forEachRemaining(headerName -> System.out.println("headerName = " + headerName));
-
-
     }
 }
