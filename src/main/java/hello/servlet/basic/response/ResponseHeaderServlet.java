@@ -2,6 +2,7 @@ package hello.servlet.basic.response;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -27,6 +28,11 @@ public class ResponseHeaderServlet extends HttpServlet {
 
         //==[Header 편의 메서드]==//
         content(response);
+        // 쿠키 설정
+        cookie(response);
+        // redirect
+        redirect(response);
+
 
         PrintWriter writer = response.getWriter();
         writer.println("ok");
@@ -35,5 +41,17 @@ public class ResponseHeaderServlet extends HttpServlet {
     private void content(HttpServletResponse response) {
         response.setContentType("text/plain;charset-utf-8");
         response.setCharacterEncoding("utf-8");
+    }
+
+    private void cookie(HttpServletResponse response) {
+        Cookie cookie = new Cookie("myCookie", "good");
+        cookie.setMaxAge(600);
+        response.addCookie(cookie);
+    }
+
+    private void redirect(HttpServletResponse response) throws IOException {
+        //response.setStatus(HttpServletResponse.SC_FOUND); //302
+        //response.setHeader("Location", "/basic/hello-form.html");
+        response.sendRedirect("/basic/hello-form.html");
     }
 }
