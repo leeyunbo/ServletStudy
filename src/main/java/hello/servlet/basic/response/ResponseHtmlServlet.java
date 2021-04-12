@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/*
+HTTP응답데이터 - HTML
+ */
+
 @WebServlet(name="responseHtmlServlet", urlPatterns = "/response-html")
 public class ResponseHtmlServlet extends HttpServlet {
 
