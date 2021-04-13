@@ -1,6 +1,5 @@
 package hello.servlet.domain.member;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +12,9 @@ class MemberRepositoryTest {
 
     MemberRepository memberRepository = MemberRepository.getInstance();
 
+    /*
+    테스트 종료 후 무조건 실행
+     */
     @AfterEach
     void afterEach() {
         memberRepository.clearStore();
