@@ -26,6 +26,11 @@ public class MemberListServlet extends HttpServlet {
         response.setContentType("text/html");
         response.setCharacterEncoding("utf-8");
 
+        /**
+         * 템플릿 엔진(jsp, thymeleaf..)이 등장한 이유..
+         * 디버깅도 불가능하고 굉장히 불편함
+         */
+
         PrintWriter w = response.getWriter();
         w.write("<html>");
         w.write("<head>");
