@@ -1,7 +1,6 @@
-# ServletStudy
-서블릿도 한번 이해해보자!
+# Servlet to Spring MVC 
 
 
-### Spring Boot 환경에서의 Servlet에 대한 공부 
-1. 목적 : Spring 공부를 위해 간단히 진행하는 Servlet 공부 
-2. 목표 : Servlet의 전체적인 흐름에 대한 학습, 어떻게 Spring MVC로 발전하게 되었는지.  
+### Servlet부터 Spring MVC까지 
+1. 목표 : 직접 Spring MVC 프레임워크와 유사하게 개발해보며, Spring MVC의 동작 방법을 확실하게 이해해보자. 
+2. 방법 : Servlet에서 Spring MVC까지 점진적으로 발전시키며 직접 구현. 
