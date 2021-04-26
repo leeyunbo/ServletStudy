@@ -22,6 +22,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/*
+컨트롤러를 추가 확장할 때 FrontController는 거의 건들 필요가 없음
+만약 컨트롤러를 추가하는 과정마저 주입식으로 변경한다면?
+확실한 OCP를 지킬 수 있다!
+ */
+
 @WebServlet(name = "frontControllerServletV5", urlPatterns = "/front-controller/v5/*")
 public class FrontControllerServletV5 extends HttpServlet {
 

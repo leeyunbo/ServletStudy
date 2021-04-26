@@ -1,7 +1,6 @@
 package hello.servlet.web.frontcontroller.v5.adapter;
 
 import hello.servlet.web.frontcontroller.ModelView;
-import hello.servlet.web.frontcontroller.v3.ControllerV3;
 import hello.servlet.web.frontcontroller.v4.ControllerV4;
 import hello.servlet.web.frontcontroller.v5.MyHandlerAdapter;
 
@@ -25,6 +24,10 @@ public class ControllerV4HandlerAdapter implements MyHandlerAdapter {
         Map<String, String> paramMap = createParamMap(request);
         HashMap<String, Object> model = new HashMap<>();
 
+        /*
+        viewName을 반환하는 점이 V3와 다르지만 어뎁터를 이용하여 동일하게 변환하는 과정을 진행함으로써
+        동일한 FrontController를 사용할 수 있게끔 하고 있음
+         */
         String viewName = controller.process(paramMap, model);
 
         ModelView mv = new ModelView(viewName);
