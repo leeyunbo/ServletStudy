@@ -21,8 +21,8 @@ public class SpringMemberControllerV2 {
         return new ModelAndView("new-form");
     }
 
-    @RequestMapping("/members")
-    public ModelAndView save() {
+    @RequestMapping()
+    public ModelAndView members() {
         List<Member> members = memberRepository.findAll();
         ModelAndView mv = new ModelAndView("members");
         mv.addObject("members", members);
@@ -31,7 +31,7 @@ public class SpringMemberControllerV2 {
     }
 
     @RequestMapping("/save")
-    public ModelAndView members(HttpServletRequest request, HttpServletResponse response) {
+    public ModelAndView save(HttpServletRequest request, HttpServletResponse response) {
         String username = request.getParameter("username");
         int age = Integer.parseInt(request.getParameter("age"));
 
